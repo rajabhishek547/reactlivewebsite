@@ -19,7 +19,7 @@ class FirstPage extends Component {
   async componentDidMount() {
     let cityName = this.props.match.params.team;
     const { data: posts } = await axios.get(
-      "http://us-central1-bkyow-22da6.cloudfunctions.net/app/movies/" + cityName
+      "https://us-central1-bkyow-22da6.cloudfunctions.net/app/movies/" + cityName
     );
     this.setState({ urlData: posts });
   }
